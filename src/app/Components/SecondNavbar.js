@@ -1,12 +1,18 @@
 'use client'
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 
 const SecondNavbar = () => {
     const searchParams = useSearchParams();
-    const genre = searchParams.get('genre');
+    const [genre , setGenre] = useState(null);
+
+    useEffect(()=>{
+        const genreParam = searchParams.get('genre');
+        setGenre(genreParam);
+    },[searchParams])
+
   return (
     <div className='flex backdrop-blur bg-gray-300 bg-opacity-70 shadow-lg p-4 justify-center gap-4 font-semibold text-white'>
        
