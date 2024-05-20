@@ -14,7 +14,7 @@ const SecondNavbar = () => {
     },[searchParams])
 
   return (
-    <div className='fixed top-[4.5rem] left-0 w-full z-40 flex backdrop-blur bg-gray-300 bg-opacity-70 shadow-lg p-4 justify-center gap-4 font-semibold text-white'>
+    <div className='fixed top-[4.5rem] left-0 w-full z-40 flex backdrop-blur bg-gray-300 bg-opacity-90 shadow-lg p-4 justify-center gap-4 font-semibold text-white'>
        
         <Link href="/?genre=fetchTrending">
                 <p className={`hover:text-gray-400 ${genre === 'fetchTrending' ? 'underline underline-offset-8 decoration-2 decoration-gray-500 rounded-lg text-gray-500 transition-all duration-300 ease-in-out' : ''}`}>

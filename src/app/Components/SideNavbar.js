@@ -10,7 +10,7 @@ const SideNavbar = ({isOpen,setIsopen}) => {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', stiffness: 200, damping: 30 }}
-            className="fixed inset-y-0 right-0 z-50 w-64 backdrop-blur bg-white bg-opacity-90 shadow-lg"
+            className="fixed inset-y-0 right-0 z-50 w-64 backdrop-blur bg-white bg-opacity-95 shadow-lg"
         >
             <div className="flex items-center justify-between p-4 border-b border-gray-200">
                 <h2 className="text-lg font-semibold text-gray-800">Menu</h2>
