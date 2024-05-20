@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 
 
 const SecondNavbar = () => {
@@ -39,5 +39,9 @@ const SecondNavbar = () => {
     </div>
   )
 }
-
-export default SecondNavbar;
+const SecondNavbarWrapper = () => (
+    <Suspense fallback={<div>Loading...</div>}>
+        <SecondNavbar />
+    </Suspense>
+);
+export default SecondNavbarWrapper;
