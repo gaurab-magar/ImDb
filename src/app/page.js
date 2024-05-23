@@ -1,3 +1,4 @@
+import HeroSection from "./Components/HeroSection";
 import ResultMap from "./Components/ResultMap";
 
 const API_KEY = process.env.API_KEY;
@@ -27,6 +28,7 @@ export default async function Home({ searchParams }) {
     return (
       <main>
         <div>
+          <HeroSection />
             <ResultMap results={data.results} genre={genre} />
         </div>
       </main>

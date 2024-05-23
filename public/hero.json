@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Batman",
+        "image":"/hero/hero0.jpg",
+        "description": "Batman is a fictional superhero appearing in American comic books published by DC Comics. The character was created by artist Bob Kane"
+    },
+    {
+        "id": 2,
+        "name": "Superman",
+        "image":"/hero/hero1.jpg",
+        "description": "Superman is a fictional superhero, the publication of DC Comics, widely considered to be an American cultural icon. Created by American writer"
+    },
+    {
+        "id": 3,
+        "name": "Spiderman",
+        "image":"/hero/hero2.jpg",
+        "description": "Spider-Man is a fictional superhero created by writer-editor Stan Lee and writer-artist Steve Ditko. He first appeared in the anthology"
+    }
+]
