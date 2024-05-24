@@ -1,8 +1,26 @@
-import React from 'react';
+'use client'
+import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { usePathname } from 'next/navigation';
 
 const SideNavbar = ({isOpen,setIsopen}) => {
+    const sideNavbarRef = useRef('');
+    const pathName = usePathname();
+
+    const handleClickOutSide = (e)=>{
+        if(sideNavbarRef.current && !sideNavbarRef.current.contains(e.target)){
+            setIsopen(false)
+            }
+    }
+
+    useEffect(()=>{
+        document.addEventListener('click',handleClickOutSide)
+        return ()=>{
+            document.removeEventListener('click',handleClickOutSide)
+            }
+    },[])
+
   return (
     
         <motion.div
@@ -11,6 +29,7 @@ const SideNavbar = ({isOpen,setIsopen}) => {
             exit={{ x: '100%' }}
             transition={{ type: 'spring', stiffness: 200, damping: 30 }}
             className="fixed inset-y-0 right-0 z-50 w-64 backdrop-blur bg-white bg-opacity-95 shadow-lg"
+            ref={sideNavbarRef} 
         >
             <div className="flex items-center justify-between p-4 border-b border-gray-200">
                 <h2 className="text-lg font-semibold text-gray-800">Menu</h2>
@@ -40,19 +59,19 @@ const SideNavbar = ({isOpen,setIsopen}) => {
                 <nav className="py-4">
                 <ul>
                     <li className="px-4 py-2 hover:bg-gray-100">
-                    <Link href="/" className="block text-gray-800">Home</Link>
+                    <Link href="/" className={`block text-gray-800 ${pathName == '/' ? 'underline underline-offset-4 decoration-gray-500 ' : ''}`} onClick={()=>{setIsopen(false)}}>Home</Link>
                     </li>
                     <li className="px-4 py-2 hover:bg-gray-100">
-                    <Link href="/about" className="block text-gray-800">About Us</Link>
+                    <Link href="/about" className={`block text-gray-800 ${pathName == '/about' ? 'underline underline-offset-4 decoration-gray-500 ' : ''}`}  onClick={()=>{setIsopen(false)}}>About Us</Link>
                     </li>
                     <li className="px-4 py-2 hover:bg-gray-100">
-                    <Link href="/service" className="block text-gray-800">Service</Link>
+                    <Link href="/service" className={`block text-gray-800 ${pathName == '/service' ? 'underline underline-offset-4 decoration-gray-500 ' : ''}`}  onClick={()=>{setIsopen(false)}}>Service</Link>
                     </li>
                     <li className="px-4 py-2 hover:bg-gray-100">
-                    <Link href="/contact" className="block text-gray-800">Contact</Link>
+                    <Link href="/contact" className={`block text-gray-800 ${pathName == '/contact' ? 'underline underline-offset-4 decoration-gray-500 ' : ''}`}  onClick={()=>{setIsopen(false)}}>Contact</Link>
                     </li>
                     <li className="px-4 py-2 hover:bg-gray-100">
-                    <Link href="/" className="block text-gray-800">TV Shows</Link>
+                    <Link href="/" className={`block text-gray-800 ${pathName == '/' ? 'underline underline-offset-4 decoration-gray-500 ' : ''}`}  onClick={()=>{setIsopen(false)}}>TV Shows</Link>
                     </li>
                 </ul>
                 </nav>

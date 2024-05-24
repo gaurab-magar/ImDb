@@ -40,8 +40,8 @@ const HeroSection = () => {
                     <SwiperSlide key={item.id}>
                         <div key={item.id} id={item.id} className="h-96">
                             <Image src={item.image} alt={item.name} width={400} height={200} className='w-full h-full object-cover object-center relative' />
-                            <h2 className='hidden md:block absolute left-7 top-52 text-xs md:text-3xl font-bold '>{item.name}</h2>
-                            <p className='hidden md:block absolute left-7 top-64  text-xs md:text-xl font-semibold w-1/3 '>{item.description}</p>
+                            <h2 className='hidden md:block absolute left-7 top-52 text-xs md:text-3xl text-white font-bold '>{item.name}</h2>
+                            <p className='hidden md:block absolute left-7 top-64  text-xs md:text-xl text-white font-semibold w-1/3 '>{item.description}</p>
                         </div>
                     </SwiperSlide>
                 ))

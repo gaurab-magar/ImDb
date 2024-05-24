@@ -6,7 +6,7 @@ import SearchBox from './SearchBox';
 
 const HeroWrap = () => {
   return (
-    <section className="relative h-[400px] w-100 overflow-hidden">
+    <section className="relative h-[384px] w-100 overflow-hidden">
         <div className="relative z-50 flex h-full flex-col items-center justify-center gap-1 px-4 text-center text-white ">
             <motion.h1 
                 initial={{ opacity: 0, x: -40 }}
