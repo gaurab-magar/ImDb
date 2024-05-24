@@ -6,6 +6,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay } from 'swiper/modules';
+import HeroWrap from './HeroWrap';
 
 const HeroSection = () => {
     const [Hero , setHero] = useState([]);
@@ -19,34 +20,34 @@ const HeroSection = () => {
     },[])
 
   return (
-    <Swiper
-        direction={'vertical'}
-        spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-        }}
-        modules={[Autoplay]}
-        className=' mySwiper h-96  lg:h-96  overflow-hidden '>
-            {
-            Hero.map((item)=>(
-                <SwiperSlide key={item.id}>
-                    <div key={item.id} id={item.id} className="h-96">
-                        <Image src={item.image} alt={item.name} width={400} height={200} className='w-full h-full object-cover object-center relative' />
-                        <h2 className='absolute left-7 top-52 text-blue-700 text-3xl font-bold z-20'>{item.name}</h2>
-                        <p className='absolute left-7 top-64 text-blue-500 text-xl font-semibold w-1/3 z-20'>{item.description}</p>
-                        <div className="absolute inset-0 bg-gray-900 opacity-60 z-10">
-                            <div className='w-full h-full flex flex-col justify-center items-center gap-1'>
-                                <h2 className='text-4xl font-bold tracking-tight sm:text-3xl md:text-4xl'>Discover the best movies</h2>
-                                <p className='text-white text-xs md:text-lg'>Search and explore a vast collection of movies, TV shows, and more.</p>
-                            </div>
+    <section className='mt-32 relative w-full'>
+        <div className='absolute w-full z-30'>
+        <div className="absolute inset-0 bg-gray-950 opacity-70"></div>
+            <HeroWrap />
+        </div>
+        <Swiper
+            direction={'vertical'}
+            spaceBetween={30}
+            centeredSlides={true}
+            autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+            }}
+            modules={[Autoplay]}
+            className=' mySwiper h-96  lg:h-96  overflow-hidden '>
+                {
+                Hero.map((item)=>(
+                    <SwiperSlide key={item.id}>
+                        <div key={item.id} id={item.id} className="h-96">
+                            <Image src={item.image} alt={item.name} width={400} height={200} className='w-full h-full object-cover object-center relative' />
+                            <h2 className='hidden md:block absolute left-7 top-52 text-xs md:text-3xl font-bold '>{item.name}</h2>
+                            <p className='hidden md:block absolute left-7 top-64  text-xs md:text-xl font-semibold w-1/3 '>{item.description}</p>
                         </div>
-                    </div>
-                </SwiperSlide>
-            ))
-        }
-    </Swiper>
+                    </SwiperSlide>
+                ))
+            }
+        </Swiper>
+    </section>
   )
 }
 
