@@ -1,6 +1,7 @@
 'use client'
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react'
+import { motion } from 'framer-motion';
 
 const SearchBox = () => {
     const [results ,setResults] = useState('');
@@ -13,7 +14,10 @@ const SearchBox = () => {
         setResults('');
     }
   return (
-    <form onSubmit={handleSubmit}  className=" flex items-center max-w-sm mx-auto m-4 px-4">   
+    <motion.form
+        initial={{scale:0.5,opacity:0}}
+        animate={{scale:1,opacity:1,transition:{duration:0.5}}}
+    onSubmit={handleSubmit}  className=" flex items-center max-w-sm mx-auto m-4 px-4">   
             <label htmlFor="simple-search" className="sr-only">Search</label>
             <div className="w-full">
                 <input value={results} onChange={(e)=>{setResults (e.target.value)}}  type="text" id="simple-search" className="outline-none bg-gray-50  text-gray-900 text-[12px] rounded-lg block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search branch name..." required />
@@ -24,7 +28,7 @@ const SearchBox = () => {
                 </svg>
                 <span className="sr-only">Search</span>
             </button>
-    </form>
+    </motion.form>
   )
 }
 

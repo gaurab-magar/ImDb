@@ -58,21 +58,34 @@ const SideNavbar = ({isOpen,setIsopen}) => {
                 </div>
                 <nav className="py-4">
                 <ul>
-                    <li className="px-4 py-2 hover:bg-gray-100">
+                    <motion.li
+                        initial={{ opacity: 0, x: 70 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5 }} 
+                        className="px-4 py-2 hover:bg-gray-100">
                     <Link href="/" className={`block text-gray-800 ${pathName == '/' ? 'underline underline-offset-4 decoration-gray-500 ' : ''}`} onClick={()=>{setIsopen(false)}}>Home</Link>
-                    </li>
-                    <li className="px-4 py-2 hover:bg-gray-100">
+                    </motion.li>
+                    <motion.li
+                        initial={{ opacity: 0, x: 70 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6 }} 
+                    className="px-4 py-2 hover:bg-gray-100">
                     <Link href="/about" className={`block text-gray-800 ${pathName == '/about' ? 'underline underline-offset-4 decoration-gray-500 ' : ''}`}  onClick={()=>{setIsopen(false)}}>About Us</Link>
-                    </li>
-                    <li className="px-4 py-2 hover:bg-gray-100">
+                    </motion.li>
+                    <motion.li
+                        initial={{ opacity: 0, x: 70 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.7 }} 
+                    className="px-4 py-2 hover:bg-gray-100">
                     <Link href="/service" className={`block text-gray-800 ${pathName == '/service' ? 'underline underline-offset-4 decoration-gray-500 ' : ''}`}  onClick={()=>{setIsopen(false)}}>Service</Link>
-                    </li>
-                    <li className="px-4 py-2 hover:bg-gray-100">
+                    </motion.li>
+                    <motion.li
+                        initial={{ opacity: 0, x: 70 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8 }} 
+                    className="px-4 py-2 hover:bg-gray-100">
                     <Link href="/contact" className={`block text-gray-800 ${pathName == '/contact' ? 'underline underline-offset-4 decoration-gray-500 ' : ''}`}  onClick={()=>{setIsopen(false)}}>Contact</Link>
-                    </li>
-                    <li className="px-4 py-2 hover:bg-gray-100">
-                    <Link href="/" className={`block text-gray-800 ${pathName == '/' ? 'underline underline-offset-4 decoration-gray-500 ' : ''}`}  onClick={()=>{setIsopen(false)}}>TV Shows</Link>
-                    </li>
+                    </motion.li>
                 </ul>
                 </nav>
         </motion.div>

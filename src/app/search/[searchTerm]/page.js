@@ -1,5 +1,6 @@
 
 import ResultMap from '@/app/Components/ResultMap';
+import SearchBox from '@/app/Components/SearchBox';
 import React from 'react'
 
 const page = async ({params}) => {
@@ -12,12 +13,15 @@ const page = async ({params}) => {
                 const result = data.results;
 
                 return (
-                    <div>
+                    <div className='mt-40'>
+                        <SearchBox />
                         {result && result.length === 0 && (
                             <h1 className='text-center pt-6'>No results found</h1>
                         )}
                         {result && result.length > 0 && (
+                            <>
                             <ResultMap results={result} />
+                            </>
                         )}
                     </div>
               )

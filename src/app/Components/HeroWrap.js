@@ -18,7 +18,8 @@ const HeroWrap = () => {
                 initial={{ opacity: 0, x: 40 }}
                 animate={{ opacity: 1, x: 0 }}    
                 transition={{ duration: 0.6 }}
-            className="max-w-[600px] text-xs md:text-lg">Search and explore a vast collection of movies, TV shows, and more.</motion.p>
+            // className="max-w-[600px] text-xs md:text-lg">Search and explore a vast collection of movies, TV shows, and more.</motion.p>
+            className="max-w-[600px] text-xs md:text-lg">I Love you CHAMELI.</motion.p>
             <SearchBox />
         </div>
     </section>

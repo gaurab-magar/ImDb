@@ -1,8 +1,18 @@
+'use client'
 import React from 'react'
-
+import { motion } from 'framer-motion'
 const about = () => {
+  const pageVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } }
+  };
   return (
-    <section className="text-gray-600 body-font dark:text-white">
+    <motion.div
+    initial="hidden"
+    animate="visible"
+    variants={pageVariants}
+    >
+    <section className="text-gray-600 body-font dark:text-white mt-32 ">
       <div className="container px-5 py-24 mx-auto">
         <div className="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
           <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="inline-block w-8 h-8 text-gray-400 mb-8" viewBox="0 0 975.036 975.036">
@@ -17,6 +27,7 @@ const about = () => {
         </div>
       </div>
   </section>
+    </motion.div>
   )
 }
 
