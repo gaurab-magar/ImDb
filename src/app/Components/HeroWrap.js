@@ -26,4 +26,4 @@ const HeroWrap = () => {
   )
 }
 
-export default HeroWrap
+export default HeroWrap;
