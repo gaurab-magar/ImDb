@@ -3,8 +3,9 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div className='mt-44'>
-    <form className="max-w-sm ms:mx-auto rounded-md p-5 mx-2 shadow-md shadow-slate-500 ">
+    <div className='mt-44 mb-20 w-full'>
+    <form className="max-w-sm md:mx-auto rounded-2xl p-5 mx-7 shadow-md shadow-slate-500 ">
+        <h2 className='font-bold text-center my-5'>Sign In</h2>
         <div className="mb-5">
             <label for="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
             <input type="email" id="email" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="name@flowbite.com" required />
