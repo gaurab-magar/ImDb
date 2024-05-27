@@ -4,15 +4,16 @@ import React from 'react'
 const page = () => {
   return (
     <div className='mt-44 mb-20 w-full'>
-    <form className="max-w-sm md:mx-auto rounded-2xl p-5 mx-7 shadow-md shadow-slate-500 ">
+    <form
+    className="max-w-sm md:mx-auto rounded-2xl p-5 mx-7 shadow-md shadow-slate-500 backdrop-blur bg-gray-300 bg-opacity-40 ">
         <h2 className='font-bold text-center my-5'>Sign In</h2>
         <div className="mb-5">
-            <label for="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-            <input type="email" id="email" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="name@flowbite.com" required />
+            <label for="email" className="block mb-2 text-base font-medium text-gray-900 dark:text-white">Your email</label>
+            <input type="email" id="email" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="email@gmail.com" required />
         </div>
         <div className="mb-5">
-            <label for="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
-            <input type="password" id="password" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required />
+            <label for="password" className="block mb-2 text-base font-medium text-gray-900 dark:text-white">Your password</label>
+            <input type="password" id="password" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required />
         </div>
         <div className="flex items-start mb-5">
             <div className="flex items-center h-5">
@@ -20,7 +21,7 @@ const page = () => {
             </div>
             <label for="terms" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" className="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a></label>
         </div>
-        <button type="submit" className="text-white w-full bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Sign In</button>
+        <button type="submit" className="text-white w-full bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Sign In</button>
         <div className='w-full flex justify-center items-center'>
             <Link href='/register'>
                 <p className='text-blue-600 font-semibold hover:underline dark:text-blue-500 text-xs mt-5'>Dont have an account? 
