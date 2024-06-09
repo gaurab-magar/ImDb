@@ -18,7 +18,7 @@ const Navbar = () => {
     <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5">
     <Link href="/" className="flex items-center space-x-3 ">
             <SiThemoviedatabase className='text-3xl' />
-        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Chami</span>
+        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">GMovie</span>
     </Link>
     <div className="flex md:order-2 space-x-3 md:space-x-0">
       <div className='flex items-center justify-center mx-2'>
